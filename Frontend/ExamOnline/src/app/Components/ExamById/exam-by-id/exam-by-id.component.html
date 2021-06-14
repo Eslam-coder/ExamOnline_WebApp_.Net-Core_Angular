@@ -1,0 +1,53 @@
+<div class="body">
+  <br>
+  <div class="container">
+    <h2 class="header shadow">{{ExamDetails.examName}} Exam</h2>
+    <br>
+    <div class="card shadow" style="width: 69.60rem;">
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title" style="color:#7868e6;">Q.No.{{QuestionsList[i].questionID}}</h5>
+        <hr>
+        <p class="card-text">{{QuestionsList[i].text}}</p>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        <form #form=ngForm >
+          <div class="row">
+            <div class="col-3">
+            <!-- <label for="StudentAnswer">Answer</label> -->
+              <input type="text" id="StudentAnswer" #Input [(ngModel)]="StudentAnswer.StudentQuestionAnswer" placeholder="Enter Your Answer" #StudentAnswer=ngModel name="StudentAnswer" required>
+              <div class="Myalert Myalert-danger" *ngIf="StudentAnswer.touched&&StudentAnswer.invalid"><i class="fas fa-exclamation-triangle"></i> Please Enter Your Answer</div>
+            </div>
+            <br>
+            <div class="col-2">
+              <button  class="btn btn-primary" (click)="GetNextQuestion(StudentAnswer.StudentQuestionAnswer,QuestionsList[i].questionID)" [hidden]="HideNext" [disabled]="form.invalid">Next</button>
+              <button  class="btn btn-primary" (click)="PostAnswerforLastQuestion(StudentAnswer.StudentQuestionAnswer,QuestionsList[i].questionID,content)" [hidden]="AppearFinish">Finish</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Appear Modal After Finish Exam-->
+<ng-template #content let-modal #template>
+    <!-- <div class="modal-header">
+      <h4 class="modal-title">Modal title</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div> -->
+    <div class="modal-body">
+      <br>
+      <!-- <p>One fine body&hellip;</p> -->
+      <div class="d-flex justify-content-center">
+        <img [src]="RightMarkImage" style="width: 80px;height: 80px;">
+      </div>
+      <h3 style="color: #7868e6; text-align: center;">Congratulations......Finished Exam</h3>
+      <h5 style="text-align: center;"><span style="cursor:pointer;text-decoration: underline;" routerLink="/AnswerReview/{{ExamDetails.examID}}" (click)="modal.close('Close click')"> Preview Your Answers and Grades</span></h5>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="modal.close('Close click')" routerLink="/Home">Close</button>
+    </div>
+  </ng-template>

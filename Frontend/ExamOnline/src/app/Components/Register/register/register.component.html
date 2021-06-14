@@ -1,0 +1,49 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <div class="col-md-6 d-none d-md-inline">
+                <img [src]="RegisterImage" class="Image">
+            </div>
+            <div class="card shadow col-12 col-md-6" style="width: 25rem;">
+                <div class="card-body">
+                    <h2 class="card-title title">Register</h2>
+                    <form (submit)="onSubmit(form)" #form="ngForm">
+                        <div class="form-group">
+                            <label for="FName">First Name</label>
+                            <input type="text" required class="form-control" #FName=ngModel [(ngModel)]="user.FName" name="FName" placeholder="Please enter Firstname"  [class.is-valid]="FName.valid" [class.is-invalid]="!FName.valid&&FName.touched">
+                            <div class="alert alert-danger" *ngIf="FName.touched&&!FName.valid">Please enter Firstname
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="LName">Last Name</label>
+                            <input type="text" required class="form-control" #LName=ngModel [(ngModel)]="user.LName" name="LName" placeholder="Please enter Lastname"  [class.is-valid]="LName.valid" [class.is-invalid]="!LName.valid&&LName.touched">
+                            <div class="alert alert-danger" *ngIf="LName.touched&&!LName.valid">Please enter Lastname
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" required class="form-control" #email=ngModel [(ngModel)]="user.Email" name="email" placeholder="Please enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [class.is-valid]="email.valid" [class.is-invalid]="!email.valid&&email.touched">
+                            <div class="alert alert-danger" *ngIf="email.touched&&!email.valid">Please enter email
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" required class="form-control" #password=ngModel [(ngModel)]="user.Password" name="password" placeholder="Please enter password" [class.is-valid]="password.valid" [class.is-invalid]="!password.valid&&password.touched">
+                            <div class="alert alert-danger" *ngIf="password.touched&&!password.valid">Please enter password
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-block" [disabled]="!form.valid" style="width: 100%;border-radius: 20px;font-size:20px;">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

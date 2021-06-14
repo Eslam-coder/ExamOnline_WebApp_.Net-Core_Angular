@@ -1,0 +1,44 @@
+.btn-primary {
+    color: #fff;
+    background-color: #7868e6;
+    border-color: #7868e6;
+  }
+
+  .btn-primary:hover {
+    color: #7868e6;
+    background-color: #fff;
+    border-color: #7868e6;
+    border-radius: 3px;
+  }
+
+  .header{
+    border-radius: 5px;
+    background-color:white;
+    color: #7868e6;
+    border:2px solid #7868e6;
+    text-align: center;
+}
+
+.table-hover tbody tr:hover{
+    color:#fff;
+    background-color: #7868e6;
+}
+
+.body{
+  background-image: url('/assets/Dashboard/D4.jpg');
+  background-repeat: none;
+  background-size: cover;
+  background-position:center;
+  height: 89.9vh;
+  width: 100%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+}

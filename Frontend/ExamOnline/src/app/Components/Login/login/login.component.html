@@ -1,0 +1,48 @@
+<div class="body">
+    <br>
+    <br>
+    <br>
+    <div class="d-flex justify-content-center">
+        <div class="card" style="width:18rem;">
+            <div class="card-body">
+                <h2 class="card-title title">Login</h2>
+                <br>
+                <form (submit)="onSubmit(form)" #form="ngForm">
+                        <div class="form-group">
+                            <!-- <label for="email" class="label">Email</label> -->
+                            <div class="d-flex justify-content-center">
+                                <input type="email" id="email" placeholder="Email" 
+                                required #email=ngModel [(ngModel)]="user.Email" 
+                                name="email" 
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            </div>
+                                <div class="Myalert Myalert-danger" *ngIf="email.touched&&!email.valid">
+                                **Please Enter Email
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <!-- <label for="email" class="label">Email</label> -->
+                            <div class="d-flex justify-content-center">
+                                <input type="password" id="password" placeholder="password" 
+                                required 
+                                #password=ngModel 
+                                [(ngModel)]="user.Password" 
+                                name="password">
+                            </div>
+                                <div class="Myalert Myalert-danger" *ngIf="password.touched&&!password.valid">
+                                **Please Enter Password
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-block" [disabled]="!form.valid" style="width: 80%; border-radius: 20px;">Login</button>
+                        </div>    
+                        <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

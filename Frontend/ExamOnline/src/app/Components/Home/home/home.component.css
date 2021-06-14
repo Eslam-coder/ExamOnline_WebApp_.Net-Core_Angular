@@ -1,0 +1,20 @@
+.body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0,0,0,0.3)) ,url(/assets/Home/Home6.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 89.9vh;
+}
+
+div h1{
+    position: absolute;
+    top: 50%;
+    color: white;
+}
+
+.type{
+    color: #7868e6;
+}
+

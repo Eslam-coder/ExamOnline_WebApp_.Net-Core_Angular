@@ -1,0 +1,55 @@
+<div class="body">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="d-flex justify-content-center">
+                    <div class="card shadow" style="width:42rem;">
+                        <div class="card-header">
+                            Add New Exam
+                        </div>
+                        <br>
+                        <div class="container">
+                            <div class="body">
+                                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                                    <div class="form-group">
+                                         <label for="examName">Name</label>
+                                         <input type="text" name="examName" id="examName" class="form-control" formControlName="examName">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <div class="photo-control">
+                                            <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
+                                       </div>
+                                   </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="totalMark">Total Mark</label>
+                                        <input type="number" name="totalMark" class="form-control" id="totalMark" formControlName="totalMark">
+                                    </div>
+                                    <br>
+                                    <div class="form-group col-md-12 d-flex justify-content-center">
+                                        <button type="submit" style="width: 100%;" class="btn btn-primary">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card-header shadow" style="padding:2px;">
+                    <h5>Exam Preview</h5>
+                </div>
+                <br>
+                <div class="card-body">
+                    <h5>Name: <span style="color:#7868e6;">{{this.form.get('examName').value}}</span></h5>
+                    <hr>
+                    <h6>Total Mark: <span style="color: #7868e6;">{{this.form.get('totalMark').value}}</span></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

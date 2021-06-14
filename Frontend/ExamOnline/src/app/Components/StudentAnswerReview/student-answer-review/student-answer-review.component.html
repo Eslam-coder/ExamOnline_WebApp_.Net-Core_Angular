@@ -1,0 +1,25 @@
+<div class="body">
+    <br>
+    <div class="container">
+        <h2 class="header shadow">Review Your Answers For Exam {{ExamInDb.examName}}</h2>
+        <br>
+        <div class=" d-flex justify-content-center">
+            <div class="card shadow" style="width: 69.60rem;">
+                <div class="card-body" *ngFor="let studentAnswer of StudentAnswers">
+                    <h4 class="card-title" style="color:#7868e6;">Q.No.({{studentAnswer.questionID}})</h4>
+                    <hr>
+                    <h5 class="card-text"></h5>
+                    <!-- <hr> -->
+                    <!-- <h5 class="card-text"><span style="color: #7868e6;">Question Answer:</span>{{studentAnswer.modelAnswer}}</h5> -->
+                    <h5 class="card-text"><span style="color: #7868e6;">Your Answer:</span> {{studentAnswer.studentQuestionAnswer}}...........<sapn style="color: #cf0000;">Your Grade:</sapn><span style="color: #cf0000;"> {{studentAnswer.studentTotalGrade}}</span></h5>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    <h3 style="text-align: center;color: #7868e6;">************</h3>
+                    <!-- <hr> -->
+                </div>
+            </div>
+        </div>
+        <br>
+        <h3 class="headerGrade shadow">Final Grade  = {{FinalGrade}}/20</h3>
+    </div>
+</div>
+<br>

@@ -1,0 +1,25 @@
+.body{
+    background-image: url('/assets/Exam/Exam1.jpg');
+    background-repeat: none;
+    background-size: cover;
+    background-position:center;
+    height: 100%;
+    width: 100%;
+}
+.header{
+    border-radius: 5px;
+    background-color:white;
+    color: #7868e6;
+    border:2px solid #7868e6;
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.headerGrade{
+    border-radius: 5px;
+    background-color:#1CAB2D;
+    color: #fff;
+    border:2px solid #1CAB2D ;
+    text-align: center;
+    padding: 4px;
+}

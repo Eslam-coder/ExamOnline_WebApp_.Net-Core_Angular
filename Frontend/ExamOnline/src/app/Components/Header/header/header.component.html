@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/Home']">ExamsOnline</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/AllExams']" style="color: white;font-size:20px;">Exams</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li> -->
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+        </ul>
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+         <!--Is Logged In-->
+         <div class="dropdown" style="margin-right: 20px;">
+          <button class="btn btn-light dropdown-toggle" style="color:#7868e6;font-size:18px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" [hidden]="!isLogged()">
+            Welcome.{{UserName}} <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" [routerLink]="['/Dashboard']" [hidden]="appearAdmin" style="cursor: pointer;" style="color:#7868e6;font-size:18px;"><i class="fas fa-folder-plus"></i> Admin Panel Dashboard</a></li>
+            <li><a class="dropdown-item" (click)="logOut()" style="cursor: pointer;" style="color:#7868e6;font-size:18px;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+      </div>
+
+      <!--Is Logged Out-->
+      <div>
+          <ul class="nav navbar-nav">
+              <li class="nav-item" style="margin-right: 5px;">
+                  <button class="btn btn-light" [routerLink]="['/Register']" style="color:#7868e6;font-size:18px;" [hidden]="isLogged()">Register</button>
+              </li>
+              <br>
+              <li class="nav-item">
+                  <button class="btn btn-light" [routerLink]="['/Login']" style="color:#7868e6;font-size:18px;" [hidden]="isLogged()">Login</button>
+              </li>
+          </ul>
+      </div>
+        <!-- <div>
+            <ul class="nav navbar-nav">
+              <li class="nav-item" style="margin-right: 5px;">
+                  <button class="btn btn-light" [routerLink]="['/Register']" style="color:#7868e6;font-size:18px;">Register</button>
+              </li>
+              <br>
+              <li class="nav-item">
+                <button class="btn btn-light" [routerLink]="['/Login']" style="color:#7868e6;font-size:18px;">Login</button>
+              </li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,42 @@
+.Image{
+    margin-left: 0;
+    width:425px;
+    height:400px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #7868e6;
+    border-color: #7868e6;
+  }
+  .btn-primary:hover {
+    color: #7868e6;
+    background-color: #fff;
+    border-color: #7868e6;
+  }
+
+  .title {
+    text-align: center;
+    color: #7868e6;
+    font-weight: bold;
+}
+
+.Myalert-success {
+  color: /*#0f5132*/ #fff;
+  background-color: /*#d1e7dd*/  #0f5132;
+  border-color: /*#badbcc*/ #0f5132;
+}
+
+.Myalert-danger {
+  color: #842029/*#fff*/;
+  background-color: #f8d7da/* #842029*/;
+  border-color: #f5c2c7/*#842029*/;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}

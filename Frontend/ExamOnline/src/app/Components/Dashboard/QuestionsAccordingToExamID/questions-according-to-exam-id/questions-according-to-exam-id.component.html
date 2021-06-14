@@ -1,0 +1,22 @@
+<div class="body">
+    <br>
+    <div class="container">
+      <h2 class="header shadow">Questions</h2>
+      <!-- <br> -->
+      <br>
+      <div class="d-flex justify-content-center">
+        <div class="card shadow" style="width: 69.60rem;">
+          <div class="card-body" *ngFor="let Question of QuestionsList; index as i">
+            <h4 class="card-title" style="color:#7868e6;">Q.No.({{i+1}}).......Mark = {{Question.mark}}</h4>
+            <hr>
+            <h5 class="card-text"><span style="color:#7868e6;">Question: </span>{{Question.text}}</h5>
+            <h6 class="card-text"><span style="color:#7868e6;">Modal Answer: </span>{{Question.modelAnswer}}</h6>
+            <button class="btn btn-primary" style="margin-right:5px;" routerLink="/QuestionDetails/{{Question.questionID}}">Edit</button><button class="btn btn-danger" (click)="Delete(Question.questionID)">Delete</button>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  
+  

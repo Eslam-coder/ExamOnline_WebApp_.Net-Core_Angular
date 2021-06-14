@@ -1,0 +1,41 @@
+.body{
+    background-image: url('/assets/Exam/Exam1.jpg');
+    background-repeat: none;
+    background-size: cover;
+    background-position:center;
+    height: 89.9vh;
+    width: 100%;
+}
+.header{
+    border-radius: 5px;
+    background-color:white;
+    color: #7868e6;
+    border:2px solid #7868e6;
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: 10px 10px 10px grey;
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+/* .image{
+    width: 285px;
+    height: 200px;
+} */
+
+.btn-primary {
+    color: #fff;
+    background-color: #7868e6;
+    border-color: #7868e6;
+  }
+
+  .btn-primary:hover {
+    color: #7868e6;
+    background-color: #fff;
+    border-color: #7868e6;
+    border-radius: 3px;
+  }
+
+  

@@ -1,0 +1,99 @@
+.body{
+    background-image: url('/assets/Login/Login.jpg');
+    background-position: center;
+    background-size: cover;
+    height:89.9vh;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.form{
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-sizing:border-box;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+  }
+
+input[type="email"]{
+    outline: none;
+    border:none;
+    border-bottom: 3px solid #7868e6;
+    background: none;
+    color: white;
+    caret-color: #7868e6;
+}
+
+.label{
+   color: white;
+}
+
+::placeholder{
+    color:#fff;
+}
+
+input[type="password"]{
+    outline: none;
+    border:none;
+    border-bottom: 3px solid #7868e6;
+    background: none;
+    color: white;
+    caret-color: #7868e6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #7868e6;
+    border-color: #7868e6;
+  }
+
+  .btn-primary:hover {
+    color: #7868e6;
+    background-color: #fff;
+    border-color: #7868e6;
+    border-radius: 3px;
+  }
+
+  .Myalert-danger {
+    color: #842029;
+    font-weight: bold;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+  }
+
+  .Myalert {
+    position: relative;
+    /* padding: 1rem 1rem; */
+    /* margin-bottom: 1rem; */
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+
+  .Myalert-success {
+    color: /*#0f5132*/ #fff;
+    background-color: /*#d1e7dd*/  #0f5132;
+    border-color: /*#badbcc*/ #0f5132;
+  }
+  .Myalert-success .Myalert-link {
+    color: #0c4128;
+  }

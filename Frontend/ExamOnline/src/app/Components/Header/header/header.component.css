@@ -1,0 +1,20 @@
+.bg-light {
+    background-color: #7868e6
+   /* #4a47a3*/ !important;
+  }
+
+.navbar-light .navbar-brand {
+  color: white;
+  font-size: 25px;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow 0.15s ease-in-out;
+  }
+  

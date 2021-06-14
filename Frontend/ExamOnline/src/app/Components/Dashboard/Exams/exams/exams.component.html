@@ -1,0 +1,32 @@
+<div class="body">
+    <br>
+    <div class="container">
+        <h2 class="header shadow">Exams</h2>
+        <br>
+        <button class="btn btn-success shadow" routerLink='/AddExam'>Create New Exam</button>
+        <br>
+        <br>
+        <table class="table table-hover shadow">
+            <thead>
+                <tr style="color: #fff;background-color:#7568e6;">
+                    <th>Name</th>
+                    <th>Mark</th>
+                    <th>Image</th>
+                    <th>Questions</th>
+                    <th colspan="2">Control</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let exam of AllExams">
+                <tr>
+                    <td>{{exam.examName}}</td>
+                    <td>{{exam.totalMark}}</td>
+                    <td><img [src]="createImgPath(exam.examImage)" alt="profile picture" style="width:60px; height:60px;"></td>
+                    <td><button class="btn btn-primary" style="margin-right: 5px;" placement="top" ngbTooltip="Show Questions" routerLink="/Questions/{{exam.examID}}"><i class="fas fa-info-circle"></i></button><button class="btn btn-success" placement="top" ngbTooltip="ADD Question" routerLink="/AddQuestion/{{exam.examID}}"><i class="fas fa-plus-square"></i></button></td>
+                    <td><button class="btn btn-danger" (click)="Delete(exam.examID,content)" style="margin-right: 5px;" placement="top" ngbTooltip="Remove"><i class="fas fa-trash"></i></button><button class="btn btn-primary" routerLink="/Exam/{{exam.examID}}" placement="top" ngbTooltip="Edit"><i class="fas fa-edit"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

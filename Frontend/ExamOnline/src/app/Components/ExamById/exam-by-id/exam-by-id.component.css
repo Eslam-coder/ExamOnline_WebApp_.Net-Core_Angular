@@ -1,0 +1,60 @@
+.body{
+    background-image: url('/assets/Exam/Exam1.jpg');
+    background-repeat: none;
+    background-size: cover;
+    background-position:center;
+    height: 89.9vh;
+    width: 100%;
+}
+.header{
+    border-radius: 5px;
+    background-color:white;
+    color: #7868e6;
+    border:2px solid #7868e6;
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+input[type="text"]{
+    outline: none;
+    border: none;
+    border-bottom:3px dashed black;
+    background-color: none;
+    color:#3f3697;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color:#7868e6;
+    border-color:#7868e6;
+  }
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #7868e6;
+    border-color: #7868e6;
+  }
+
+  
+  .Myalert-danger {
+    color: #842029;
+    font-weight: bold;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    margin-top: 5px;
+    padding-left: 5px;
+  }
+
+  .Myalert {
+    position: relative;
+    /* padding: 1rem 1rem; */
+    /* margin-bottom: 1rem; */
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+  }

@@ -1,0 +1,30 @@
+<div class="body">
+    <br>
+    <div class="container">
+        <h2 class="header shadow">Users</h2>
+        <br>
+        <button class="btn btn-primary shadow" routerLink="/AddUser">Create New User</button>
+        <br>
+        <br>
+        <table class="table table-hover shadow">
+            <thead>
+                <tr style="color: #fff;background-color:#7568e6;">
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Control</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let user of AllUsers">
+                <tr>
+                    <td>{{user.fName}}</td>
+                    <td>{{user.lName}}</td>
+                    <td>{{user.email}}</td>
+                    <td><button class="btn btn-danger" (click)="Delete(user.studentID)" placement="top" ngbTooltip="Remove"><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+</div>
+
